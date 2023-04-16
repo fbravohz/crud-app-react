@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  db: null,
+  database: null,
   pagination: 5,
   filter: null,
   sortcolumn: null,
@@ -11,18 +11,21 @@ export const dataSlice = createSlice({
   name: 'data',
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1
+    setDatabase: (state, action) => {
+      state.database = action.payload;
     },
-    decrement: (state) => {
-      state.value -= 1
+    setPagination: (state, action) => {
+      state.pagination = action.payload;
     },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload
+    setFilter: (state, action) => {
+      state.filter = action.payload;
     },
+    setSortColumn: (state, action) => {
+      state.sortColumn = action.payload;
+    }
   },
 })
 
-export const { increment, decrement, incrementByAmount } = dataSlice.actions
+export const { setDatabase, setPagination, setFilter, setSortColumn } = dataSlice.actions
 
 export default dataSlice.reducer

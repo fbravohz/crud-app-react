@@ -5,9 +5,24 @@ import { TagIcon, PhoneIcon, EmailIcon } from "/src/components/Content/Icons/Ico
 import SortUp from "/src/assets/sort-up.svg";
 import SortDown from "/src/assets/sort-down.svg";
 import db from "/src/db/db.json";
-
+import { setDatabase } from "../../../../store/slices/dataSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function TableItems(){
+  const filter = useSelector(state => state.data.filter);
+  const dispatch = useDispatch();
+
+  React.useEffect(() => {
+    dispatch(setDatabase(db.data))
+  },[])
+
+  function getIfModDatabase(){
+    if(filter !== null && filter?.length > 0)
+      return filter;
+    else
+      return db.data;
+  }
+
   const columns = Object.keys(db.data[0]);
   return(
   <table className={styles.table}>
@@ -19,7 +34,7 @@ export default function TableItems(){
       </tr>
     </thead>
     <tbody>
-      {db.data.map((row, index) => (
+      {getIfModDatabase().map((row, index) => (
         <TableRow rowData={row} key={index}/>
       ))}
     </tbody>
