@@ -1,0 +1,40 @@
+@import '/src/styles/constants.scss';
+
+.table{
+  margin: 30px 0px;
+  grid-column: span 3;
+  background-color: $white;
+  border-collapse: collapse;
+  border-spacing: 0;
+  thead {
+    background-color: $orange;
+    color: $white;
+    text-align: left;
+  }
+  th, td {
+    border: 1px solid $orange;
+
+  }
+  td{
+    font-size: 13rem;
+    padding: 0px 20px;
+  }
+  th{
+    font-size: 17rem;
+    .thContainer{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      div{
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  tbody tr{
+    &:hover{
+      background-color: mix($white, #000000, 85%);
+      }
+  }
+}
+

@@ -1,11 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  value: 0,
+  db: null,
+  pagination: 5,
+  filter: null,
+  sortcolumn: null,
 }
 
-export const counterSlice = createSlice({
-  name: 'counter',
+export const dataSlice = createSlice({
+  name: 'data',
   initialState,
   reducers: {
     increment: (state) => {
@@ -20,6 +23,6 @@ export const counterSlice = createSlice({
   },
 })
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export const { increment, decrement, incrementByAmount } = dataSlice.actions
 
-export default counterSlice.reducer
+export default dataSlice.reducer

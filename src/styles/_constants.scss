@@ -10,9 +10,9 @@ $lg: 992px; // Large
 $xl: 1200px; // Extra large
 
 @function calc-hover-color($color){
-  @return mix($color, black, 90%);
+  @return mix($color, #ffffff, 95%);
 }
 
 @function calc-click-color($color){
-  @return mix($color, black, 80%);
+  @return mix($color, #ffffff, 85%);
 }

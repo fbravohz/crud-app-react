@@ -1,0 +1,82 @@
+@import '/src/styles/constants.scss';
+
+.createIcon{
+  background-color: transparent;
+  display: flex;
+  padding: 2px 3px 2px 0px;
+}
+
+$buttonWidth: 95px;
+
+.deleteIcon{
+  $localColor: #9b0000;
+  background-color: $localColor;
+  color: white;
+  border: none;
+  display: flex;
+  width: $buttonWidth;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  &:hover{
+    background-color: calc-hover-color($localColor);
+  }
+  &:active{
+    background-color: calc-click-color($localColor);
+  }
+}
+
+.editIcon{
+  $localColor: #9b8b00;
+  background-color: $localColor;
+  color: white;
+  border: none;
+  display: flex;
+  width: $buttonWidth;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  &:hover{
+    background-color: calc-hover-color($localColor);
+  }
+  &:active{
+    background-color: calc-click-color($localColor);
+  }
+}
+
+.viewIcon{
+  $localColor: #00399b;
+  background-color: $localColor;
+  color: white;
+  border: none;
+  display: flex;
+  width: $buttonWidth;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  &:hover{
+    background-color: calc-hover-color($localColor);
+  }
+  &:active{
+    background-color: calc-click-color($localColor);
+  }
+}
+
+.tagIcon{
+  $localColor: #427200;
+  background-color: $localColor;
+  display: flex;
+  margin: 2px;
+  padding: 3px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+}
+
+.contactIcon{
+  $localColor: #006772;
+  background-color: $localColor;
+  display: flex;
+  margin: 2px;
+  padding: 3px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+}

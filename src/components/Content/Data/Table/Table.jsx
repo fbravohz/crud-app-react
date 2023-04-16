@@ -1,50 +1,13 @@
 import React from "react";
 import styles from "./Table.module.scss";
-import CreateButtton from "../../Buttons/CreateButton";
+import { DeleteButton, EditButton, ViewButton } from "/src/components/Content/Buttons/Buttons";
+import { TagIcon, PhoneIcon, EmailIcon } from "/src/components/Content/Icons/Icons";
 import SortUp from "/src/assets/sort-up.svg";
 import SortDown from "/src/assets/sort-down.svg";
-import Add from "/src/assets/actions/add.svg";
-import Delete from "/src/assets/actions/delete.svg";
-import Edit from "/src/assets/actions/edit.svg";
-import View from "/src/assets/actions/view.svg";
-import Tag from "/src/assets/tag.svg";
 import db from "/src/db/db.json";
 
-export default function Table(){
-  return(
-    <div className={styles.container}>
-      <SelectRows/>
-      <SearchBar/>
-      <CreateButtton/>
-      <TableItems/>
-    </div>
-  )
-}
 
-function SelectRows(){
-return(
-  <div className={styles.pagination}>
-    <label >Items por página:</label>
-    <select className={styles.select} name="select">
-      <option value={10}>10</option>
-      <option value={30}>30</option>
-      <option value={50}>50</option>
-      <option value={100}>100</option>
-    </select>
-  </div>
-);
-}
-
-function SearchBar(){
-  return(
-    <div className={styles.search}>
-      <label>Filtrar:</label>
-      <input className={styles.inputSearch} type="text"/>
-    </div>
-  );
-}
-
-function TableItems(){
+export default function TableItems(){
   const columns = Object.keys(db.data[0]);
   return(
   <table className={styles.table}>
@@ -113,22 +76,38 @@ function TableRow({ rowData }){
   );
 }
 
+
+
 function TableRowObjectCell(object){
 
   const assignedIcon = {
-    "Ver": View,
-    "Editar": Edit,
-    "Borrar": Delete,
+    "Ver": <ViewButton/>,
+    "Editar": <EditButton/>,
+    "Borrar": <DeleteButton/>,
   }
 
   if(Array.isArray(object)){
     return object.map((value, index) => (
-      <span key={index}>{<img src={assignedIcon[value] ? assignedIcon[value] : Tag}/>}</span>
+      <span
+        style={{display: 'flex'}}
+        key={index}
+      >
+        {assignedIcon[value] ? assignedIcon[value] :
+        <TagIcon text={value}/>}
+      </span>
     ))
   }
 
-  return(
-  <>
-    
-  </>);
+  else{
+    return Object.keys(object).map((value, index) => (
+      <span
+        style={{display: 'flex'}}
+      key={index}
+      >
+        {index === 0 ?
+          <PhoneIcon text={object[value]}/> :
+          <EmailIcon text={object[value]}/>}
+      </span>
+    ))
+  }
 }

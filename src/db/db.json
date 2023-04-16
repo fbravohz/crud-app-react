@@ -2,10 +2,31 @@
   "data": [
     {
       "id": 1,
-      "Fecha": "0",
-      "Centro": "none",
-      "Nombre": "Test",
-      "Curso": "new",
+      "Fecha": "2018-01-01",
+      "Centro": "Guadalajara",
+      "Nombre": "Angeles Maldonado",
+      "Curso": "recursos humanos",
+      "Edad": 21,
+      "Contacto": {
+        "Telefono": "1231541",
+        "Correo": "sfgs@dfsgs.com"
+      },
+      "Etiquetas": [
+        "etiqueta",
+        "etiqueta2"
+      ],
+      "Acciones": [
+        "Ver",
+        "Editar",
+        "Borrar"
+      ]
+    },
+    {
+      "id": 2,
+      "Fecha": "2018-01-01",
+      "Centro": "CdMx",
+      "Nombre": "Javier Gutierrez",
+      "Curso": "electronica",
       "Edad": 45,
       "Contacto": {
         "Telefono": "1231541",
@@ -22,33 +43,12 @@
       ]
     },
     {
-      "id": 1,
-      "Fecha": "0",
-      "Centro": "none",
-      "Nombre": "Test",
-      "Curso": "new",
-      "Edad": 45,
-      "Contacto": {
-        "Telefono": "1231541",
-        "Correo": "sfgs@dfsgs.com"
-      },
-      "Etiquetas": [
-        "etiqueta",
-        "etiqueta2"
-      ],
-      "Acciones": [
-        "Ver",
-        "Editar",
-        "Borrar"
-      ]
-    },
-    {
-      "id": 1,
-      "Fecha": "0",
-      "Centro": "none",
-      "Nombre": "Test",
-      "Curso": "new",
-      "Edad": 45,
+      "id": 3,
+      "Fecha": "2018-01-01",
+      "Centro": "Monterrey",
+      "Nombre": "Ignacio Allende",
+      "Curso": "mecatronica",
+      "Edad": 30,
       "Contacto": {
         "Telefono": "1231541",
         "Correo": "sfgs@dfsgs.com"
