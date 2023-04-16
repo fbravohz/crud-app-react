@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "Fecha": "0",
+      "Centro": "none",
+      "Nombre": "Test",
+      "Curso": "new",
+      "Edad": 45,
+      "Contacto": {
+        "Telefono": "1231541",
+        "Correo": "sfgs@dfsgs.com"
+      },
+      "Etiquetas": [
+        "etiqueta",
+        "etiqueta2"
+      ],
+      "Acciones": [
+        "Ver",
+        "Editar",
+        "Borrar"
+      ]
+    },
+    {
+      "id": 1,
+      "Fecha": "0",
+      "Centro": "none",
+      "Nombre": "Test",
+      "Curso": "new",
+      "Edad": 45,
+      "Contacto": {
+        "Telefono": "1231541",
+        "Correo": "sfgs@dfsgs.com"
+      },
+      "Etiquetas": [
+        "etiqueta",
+        "etiqueta2"
+      ],
+      "Acciones": [
+        "Ver",
+        "Editar",
+        "Borrar"
+      ]
+    },
+    {
+      "id": 1,
+      "Fecha": "0",
+      "Centro": "none",
+      "Nombre": "Test",
+      "Curso": "new",
+      "Edad": 45,
+      "Contacto": {
+        "Telefono": "1231541",
+        "Correo": "sfgs@dfsgs.com"
+      },
+      "Etiquetas": [
+        "etiqueta",
+        "etiqueta2"
+      ],
+      "Acciones": [
+        "Ver",
+        "Editar",
+        "Borrar"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+@import '/src/styles/constants.scss';
+
+.btn{
+  grid-column: 3;
+  justify-self: right;
+  width: fit-content;
+  background-color: $orange;
+  border: none;
+  border-radius: 3px;
+  font-weight: 500;
+  color: $white;
+  &:hover{
+    background-color: calc-hover-color($orange);
+  }
+  &:active{
+    background-color: calc-click-color($orange);
+  }
+}

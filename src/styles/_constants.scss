@@ -1,0 +1,18 @@
+$white: #F4F4F4;
+$orange: #FF7315;
+$gray: #3A3535;
+$black: #232020;
+
+$xs: 0; // Extra small
+$sm: 576px; // Small
+$md: 768px; // Medium
+$lg: 992px; // Large
+$xl: 1200px; // Extra large
+
+@function calc-hover-color($color){
+  @return mix($color, black, 90%);
+}
+
+@function calc-click-color($color){
+  @return mix($color, black, 80%);
+}
