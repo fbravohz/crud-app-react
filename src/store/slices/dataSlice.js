@@ -5,6 +5,9 @@ const initialState = {
   pagination: 5,
   filter: null,
   sortcolumn: null,
+  showModal: false,
+  actionDataId: null,
+  actionType: null
 }
 
 export const dataSlice = createSlice({
@@ -22,10 +25,19 @@ export const dataSlice = createSlice({
     },
     setSortColumn: (state, action) => {
       state.sortColumn = action.payload;
-    }
+    },
+    setShowModal: (state) => {
+      state.showModal = !state.showModal;
+    },
+    setActionDataId: (state, action) => {
+      state.actionDataId = action.payload;
+    },
+    setActionType: (state, action) => {
+      state.actionType = action.payload;
+    },
   },
 })
 
-export const { setDatabase, setPagination, setFilter, setSortColumn } = dataSlice.actions
+export const { setDatabase, setPagination, setFilter, setSortColumn, setShowModal, setActionDataId, setActionType } = dataSlice.actions
 
 export default dataSlice.reducer

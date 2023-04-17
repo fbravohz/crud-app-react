@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setFilter } from "../../../store/slices/dataSlice";
 
 export default function Data(){
+
   return(
     <div className={styles.container}>
       <SelectRows/>

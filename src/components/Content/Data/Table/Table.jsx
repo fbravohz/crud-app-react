@@ -4,26 +4,21 @@ import { DeleteButton, EditButton, ViewButton } from "/src/components/Content/Bu
 import { TagIcon, PhoneIcon, EmailIcon } from "/src/components/Content/Icons/Icons";
 import SortUp from "/src/assets/sort-up.svg";
 import SortDown from "/src/assets/sort-down.svg";
-import db from "/src/db/db.json";
 import { setDatabase } from "../../../../store/slices/dataSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function TableItems(){
+  const database = useSelector(state => state.data.database);
   const filter = useSelector(state => state.data.filter);
-  const dispatch = useDispatch();
-
-  React.useEffect(() => {
-    dispatch(setDatabase(db.data))
-  },[])
-
   function getIfModDatabase(){
     if(filter !== null && filter?.length > 0)
       return filter;
     else
-      return db.data;
+      return database;
   }
 
-  const columns = Object.keys(db.data[0]);
+  const columns = Object.keys(database[0]);
+
   return(
   <table className={styles.table}>
     <thead>
@@ -43,16 +38,13 @@ export default function TableItems(){
 }
 
 function TableRowHeader({ columnName }){
-
   const sorter = {
     none: null,
     ascending: SortUp,
     descending: SortDown
   }
-
   const sortOptions = Object.keys(sorter);
   const [sortBy, setSortBy ] = React.useState(sortOptions[1])
-
   function handleClick(){
     sortBy === sortOptions[0] ?
     setSortBy(sortOptions[1]) :
@@ -62,7 +54,6 @@ function TableRowHeader({ columnName }){
     setSortBy(sortOptions[0]) :
     null
   }
-
   return(
   <th>
     <div
@@ -79,28 +70,23 @@ function TableRowHeader({ columnName }){
 }
 
 function TableRow({ rowData }){
-
   return(
     <tr>
       {Object.keys(rowData).map((column, index) => (
         typeof(rowData[column]) === 'object' ?
-        <td key={index}>{TableRowObjectCell(rowData[column])}</td>:
+        <td key={index}>{TableRowObjectCell(rowData[column], rowData.id)}</td>:
         <td key={index}>{rowData[column]}</td>
       ))}
     </tr>
   );
 }
 
-
-
-function TableRowObjectCell(object){
-
+function TableRowObjectCell(object, rowDataId){
   const assignedIcon = {
-    "Ver": <ViewButton/>,
-    "Editar": <EditButton/>,
-    "Borrar": <DeleteButton/>,
+    "Ver": <ViewButton rowId={rowDataId}/>,
+    "Editar": <EditButton rowId={rowDataId}/>,
+    "Borrar": <DeleteButton rowId={rowDataId}/>,
   }
-
   if(Array.isArray(object)){
     return object.map((value, index) => (
       <span
@@ -112,7 +98,6 @@ function TableRowObjectCell(object){
       </span>
     ))
   }
-
   else{
     return Object.keys(object).map((value, index) => (
       <span
