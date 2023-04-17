@@ -7,11 +7,11 @@ export default function NavBar(){
     <header>
       <nav className={styles.nav}>
         <ul className={styles.ul}>
-          <li><a href="#"> Home </a></li>
-          <li><a href="#"> About </a></li>
-          <li><a href="#"> Contact </a></li>
-          <li><a href="#"> Terms of use </a></li>
-          <li><a href="#"> Join Us </a></li>
+          <li><a href="#"> Usuarios </a></li>
+          <li><a href="#"> Servicios </a></li>
+          <li><a href="#"> Marketing </a></li>
+          <li><a href="#"> Ventas </a></li>
+          <li><a href="#"> Opciones </a></li>
         </ul>
       </nav>
     </header>

@@ -11,12 +11,9 @@ export default function TableItems(){
   let database = useSelector(state => state.data.database);
   const filter = useSelector(state => state.data.filter);
   const sortColumn = useSelector(state => state.data.sortColumn);
-  function getIfModDatabase(){
+  const pagination = useSelector(state => state.data.pagination);
 
-    if(filter !== null && filter?.length > 0){
-      return filter;
-      }
-
+  function sortedDatabase(){
     if(sortColumn !== null){
       function ascending(column) {
         return function(a, b) {
@@ -48,9 +45,22 @@ export default function TableItems(){
         const copy = [...database]
         return copy.sort(descending(sortColumn.column));
       }
-      else
-        return database;
+      return database;
     }
+    return database;
+  }
+
+  function getIfModDatabase(){
+
+    if(filter !== null && filter?.length > 0){
+      return filter;
+    }
+
+    if(pagination !== null){
+      const copy = [...sortedDatabase()]
+      return copy.slice(0, pagination)
+    }
+
     else
       return database;
   }

@@ -3,7 +3,7 @@ import styles from "./Data.module.scss";
 import {CreateButton} from "../Buttons/Buttons";
 import TableItems from "./Table/Table";
 import { useDispatch, useSelector } from "react-redux";
-import { setFilter } from "../../../store/slices/dataSlice";
+import { setFilter, setPagination } from "../../../store/slices/dataSlice";
 
 export default function Data(){
 
@@ -18,10 +18,17 @@ export default function Data(){
 }
 
 function SelectRows(){
-return(
+  const dispatch = useDispatch();
+  const [selected, setSelected] = React.useState(30);
+  function handleChange(value){
+    setSelected(value)
+    dispatch(setPagination(value));
+  }
+
+  return(
   <div className={styles.pagination}>
     <label >Items por página:</label>
-    <select className={styles.select} name="select">
+    <select value={selected} onChange={(e) => handleChange(e.target.value)} className={styles.select} name="select">
       <option value={5}>5</option>
       <option value={10}>10</option>
       <option value={15}>15</option>

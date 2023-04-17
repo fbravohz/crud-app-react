@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   database: null,
-  pagination: 5,
+  pagination: 30,
   filter: null,
   sortColumn: null,
   showModal: false,
