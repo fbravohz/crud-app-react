@@ -2,24 +2,29 @@
 
 @media(max-width: $lg){
   .container{
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 0px 30px;
+  }
+  .pagination{
+    grid-column: span 3;
+    justify-self: right;
+    color: $white;
+    margin-bottom: 15px;
+  }
+  .search{
+    grid-column: span 1;
+    justify-self: left;
+    margin-bottom: 15px;
   }
 }
 
 @media(min-width: $lg){
-  .container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 0px 30px;
+  .pagination{
+    grid-column: span 1;
+    color: $white;
   }
 }
 
-.pagination{
-  grid-column: span 1;
-  color: $white;
-}
+
 
 .select{
   margin-left: 10px;
@@ -31,9 +36,11 @@
 }
 
 .search{
-  grid-column: span 1;
   justify-self: center;
   color: $white;
+  grid-column: span 1;
+  display: flex;
+  align-items: center;
   .inputSearch{
     margin-left: 10px;
     border: none;
@@ -46,3 +53,8 @@
   }
 }
 
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0px 30px;
+}

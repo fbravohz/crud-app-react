@@ -1,7 +1,7 @@
 @import '/src/styles/constants.scss';
 
 .createBtn{
-  grid-column: span 1;
+  grid-column: span 3;
   justify-self: right;
   width: fit-content;
   background-color: $orange;
