@@ -5,12 +5,13 @@ import Data from './components/Content/Data/Data'
 import DataModal from './components/Content/Data/Modal/Modal'
 import { data } from '/src/db/db.json'
 import { useEffect } from 'react'
-import { setDatabase } from './store/slices/dataSlice'
+import { setDatabase, setColumnNames } from './store/slices/dataSlice'
 import { useDispatch } from 'react-redux'
 
 function App() {
   const dispatch = useDispatch();
   dispatch(setDatabase(data));
+  dispatch(setColumnNames(Object.keys(data[0])));
   return (
   <>
     <div className={styles.App}>

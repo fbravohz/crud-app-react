@@ -63,5 +63,26 @@
         "Borrar"
       ]
     }
-  ]
+  ],
+  "template":{
+    "id": "",
+    "Fecha": "",
+    "Centro": "",
+    "Nombre": "",
+    "Curso": "",
+    "Edad": "",
+    "Contacto": {
+      "Telefono": "",
+      "Correo": ""
+    },
+    "Etiquetas": [
+      "",
+      ""
+    ],
+    "Acciones": [
+      "Ver",
+      "Editar",
+      "Borrar"
+    ]
+  }
 }

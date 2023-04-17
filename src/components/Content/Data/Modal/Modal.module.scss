@@ -45,3 +45,18 @@
     background-color: calc-click-color($orange);
   }
 }
+
+.modal input{
+  max-width: 150px;
+  margin: 5px;
+}
+
+.dataShow{
+color: $gray;
+border: 1px solid $orange;
+border-radius: 5px;
+max-width: 150px;
+margin: 5px;
+display: flex;
+justify-content: center;
+}

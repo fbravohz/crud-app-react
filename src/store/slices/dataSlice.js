@@ -7,7 +7,9 @@ const initialState = {
   sortcolumn: null,
   showModal: false,
   actionDataId: null,
-  actionType: null
+  actionType: null,
+  columnNames: null,
+  editRow: null,
 }
 
 export const dataSlice = createSlice({
@@ -35,9 +37,16 @@ export const dataSlice = createSlice({
     setActionType: (state, action) => {
       state.actionType = action.payload;
     },
+    setColumnNames: (state, action) => {
+      state.columnNames = action.payload;
+    },
+    setEditRow: (state, action) => {
+      state.editRow = action.payload;
+    }
   },
 })
 
-export const { setDatabase, setPagination, setFilter, setSortColumn, setShowModal, setActionDataId, setActionType } = dataSlice.actions
+export const { setDatabase, setPagination, setFilter, setSortColumn,
+setShowModal, setActionDataId, setActionType, setColumnNames, setEditRow } = dataSlice.actions
 
 export default dataSlice.reducer

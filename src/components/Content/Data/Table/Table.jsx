@@ -81,7 +81,7 @@ function TableRow({ rowData }){
   );
 }
 
-function TableRowObjectCell(object, rowDataId){
+export function TableRowObjectCell(object, rowDataId){
   const assignedIcon = {
     "Ver": <ViewButton rowId={rowDataId}/>,
     "Editar": <EditButton rowId={rowDataId}/>,
