@@ -4,15 +4,53 @@ import { DeleteButton, EditButton, ViewButton } from "/src/components/Content/Bu
 import { TagIcon, PhoneIcon, EmailIcon } from "/src/components/Content/Icons/Icons";
 import SortUp from "/src/assets/sort-up.svg";
 import SortDown from "/src/assets/sort-down.svg";
-import { setDatabase } from "../../../../store/slices/dataSlice";
+import { setSortColumn } from "../../../../store/slices/dataSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function TableItems(){
-  const database = useSelector(state => state.data.database);
+  let database = useSelector(state => state.data.database);
   const filter = useSelector(state => state.data.filter);
+  const sortColumn = useSelector(state => state.data.sortColumn);
   function getIfModDatabase(){
-    if(filter !== null && filter?.length > 0)
+
+    if(filter !== null && filter?.length > 0){
       return filter;
+      }
+
+    if(sortColumn !== null){
+      function ascending(column) {
+        return function(a, b) {
+          if (a[column] < b[column]) {
+            return -1;
+          }
+          if (a[column] > b[column]) {
+            return 1;
+          }
+          return 0;
+        }
+      }
+      function descending(column) {
+        return function(a, b) {
+          if (a[column] > b[column]) {
+            return -1;
+          }
+          if (a[column] < b[column]) {
+            return 1;
+          }
+          return 0;
+        }
+      }
+      if(sortColumn.sort === 'ascending'){
+        const copy = [...database]
+        return copy.sort(ascending(sortColumn.column));
+      }
+      if(sortColumn.sort === 'descending'){
+        const copy = [...database]
+        return copy.sort(descending(sortColumn.column));
+      }
+      else
+        return database;
+    }
     else
       return database;
   }
@@ -38,21 +76,29 @@ export default function TableItems(){
 }
 
 function TableRowHeader({ columnName }){
+  const dispatch = useDispatch();
   const sorter = {
     none: null,
     ascending: SortUp,
     descending: SortDown
   }
   const sortOptions = Object.keys(sorter);
-  const [sortBy, setSortBy ] = React.useState(sortOptions[1])
+  const [sortBy, setSortBy ] = React.useState(sortOptions[0])
+
   function handleClick(){
-    sortBy === sortOptions[0] ?
-    setSortBy(sortOptions[1]) :
-    sortBy === sortOptions[1] ?
-    setSortBy(sortOptions[2]) :
-    sortBy === sortOptions[2] ?
-    setSortBy(sortOptions[0]) :
-    null
+    if(sortBy === sortOptions[0]){
+      setSortBy(sortOptions[1])
+      dispatch(setSortColumn({column: columnName, sort: sortOptions[1]}))
+    }
+    if(sortBy === sortOptions[1]){
+      setSortBy(sortOptions[2])
+      dispatch(setSortColumn({column: columnName, sort: sortOptions[2]}))
+    }
+    if(sortBy === sortOptions[2]){
+      setSortBy(sortOptions[0])
+      dispatch(setSortColumn({column: columnName, sort: sortOptions[0]}))
+    }
+
   }
   return(
   <th>

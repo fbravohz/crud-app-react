@@ -36,9 +36,12 @@ function SearchBar(){
   const dispatch = useDispatch();
 
   function handleChange(value, database){
-    const modified = searchJSON(database, value);
-    dispatch(setFilter(modified));
-
+    if(value === '')
+      dispatch(setFilter(null))
+    else{
+      const modified = searchJSON(database, value);
+      dispatch(setFilter(modified));
+    }
   }
 
   function searchJSON(jsonData, searchString) {

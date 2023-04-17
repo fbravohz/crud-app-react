@@ -4,7 +4,7 @@ const initialState = {
   database: null,
   pagination: 5,
   filter: null,
-  sortcolumn: null,
+  sortColumn: null,
   showModal: false,
   actionDataId: null,
   actionType: null,
