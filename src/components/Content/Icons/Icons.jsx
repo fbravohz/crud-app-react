@@ -22,7 +22,7 @@ export function DeleteIcon(){
   return(
     <button className={styles.deleteIcon}>
       {<img src={Delete}/>}
-      <span>Eliminar</span>
+      <span className={styles.fontIcon}>Eliminar</span>
     </button>
   )
 }
@@ -32,7 +32,7 @@ export function EditIcon(){
   return(
     <button className={styles.editIcon}>
       {<img src={Edit}/>}
-      <span>Editar</span>
+      <span className={styles.fontIcon}>Editar</span>
     </button>
   )
 }
@@ -42,7 +42,7 @@ export function ViewIcon(){
   return(
     <button className={styles.viewIcon}>
       {<img src={View}/>}
-      <span>Ver</span>
+      <span className={styles.fontIcon}>Ver</span>
     </button>
   )
 }
@@ -52,7 +52,7 @@ export function TagIcon({text}){
   return(
     <span className={styles.tagIcon}>
       {<img src={Tag}/>}
-      <span style={{marginLeft: '2px', color: 'white'}}>{text}</span>
+      <span className={styles.fontIcon}>{text}</span>
     </span>
   )
 }
@@ -62,7 +62,7 @@ export function PhoneIcon({text}){
   return(
     <span className={styles.contactIcon}>
       {<img src={Phone}/>}
-      <span style={{marginLeft: '2px', color: 'white'}}>{text}</span>
+      <span className={styles.fontIcon}>{text}</span>
     </span>
   )
 }
@@ -72,7 +72,7 @@ export function EmailIcon({text}){
   return(
     <span className={styles.contactIcon}>
       {<img src={Email}/>}
-      <span style={{marginLeft: '2px', color: 'white'}}>{text}</span>
+      <span className={styles.fontIcon}>{text}</span>
     </span>
   )
 }

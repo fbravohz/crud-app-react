@@ -1,12 +1,23 @@
 @import '/src/styles/constants.scss';
 
-.container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 0px 30px;
+@media(max-width: $lg){
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0px 30px;
+  }
+}
+
+@media(min-width: $lg){
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0px 30px;
+  }
 }
 
 .pagination{
+  grid-column: span 1;
   color: $white;
 }
 
@@ -20,6 +31,7 @@
 }
 
 .search{
+  grid-column: span 1;
   justify-self: center;
   color: $white;
   .inputSearch{

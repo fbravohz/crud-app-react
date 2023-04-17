@@ -1,40 +1,94 @@
 @import '/src/styles/constants.scss';
 
-.table{
-  margin: 30px 0px;
-  grid-column: span 3;
-  background-color: $white;
-  border-collapse: collapse;
-  border-spacing: 0;
-  thead {
-    background-color: $orange;
-    color: $white;
-    text-align: left;
+@media (max-width: $lg){
+  .tableContainer{
+    grid-column: span 3;
+    margin: 30px 20px;
+    overflow-x: scroll;
   }
-  th, td {
-    border: 1px solid $orange;
 
-  }
-  td{
-    font-size: 13rem;
-    padding: 0px 20px;
-  }
-  th{
-    font-size: 17rem;
-    .thContainer{
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      div{
-        width: 25px;
-        height: 25px;
+  .table{
+    background-color: $white;
+    border-collapse: collapse;
+    thead {
+      background-color: $orange;
+      color: $white;
+      text-align: left;
+    }
+    th, td {
+      border: 1px solid $orange;
+    }
+    td{
+      font-size: 8rem;
+      padding: 0px 20px;
+    }
+    th{
+      span {
+        font-size: 12rem;
+      }
+      .thContainer{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        div{
+          width: 25px;
+          height: 25px;
+        }
       }
     }
+    tbody tr{
+      &:hover{
+        background-color: mix($white, #000000, 85%);
+        }
+    }
   }
-  tbody tr{
-    &:hover{
-      background-color: mix($white, #000000, 85%);
+  
+}
+
+@media (min-width: $lg){
+  .tableContainer{
+    grid-column: span 3;
+    margin: 30px 0px;
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  .table{
+    background-color: $white;
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+      background-color: $orange;
+      color: $white;
+      text-align: left;
+    }
+    th, td {
+      border: 1px solid $orange;
+    }
+    td{
+      font-size: 15rem;
+      padding: 0px 20px;
+    }
+    th{
+      span{
+        font-size: 18rem;
       }
+      .thContainer{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        div{
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+    tbody tr{
+      &:hover{
+        background-color: mix($white, #000000, 85%);
+        }
+    }
   }
 }
+
 

@@ -1,34 +1,5 @@
 @import '/src/styles/constants.scss';
 
-// .nav{
-//   display: grid;
-//   grid-template-columns: 1fr 3fr 1fr;
-//   background-color: $gray;
-// }
-
-// .ul{
-//   grid-column: 2;
-//   list-style: none;
-//   display: flex;
-//   justify-content:space-around;
-//   // border: none;
-// }
-
-// li{
-//   // border: none;
-
-//   margin: 5px;
-//   min-width: 50rem;
-//   width: 100rem;
-// }
-
-// a{
-//   font-family: 'Montserrat';
-//   color: $white;
-//   text-decoration: none;
-//   border: none;
-// }
-
 nav {
   display: flex;
   justify-content: center;
@@ -52,15 +23,29 @@ li {
   margin: 0 10px;
 }
 
-a {
-  color: $black;
-  text-decoration: none;
-  font-size: 18rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  transition: color 0.2s ease-in-out;
-}
 
 a:hover {
   color: $orange;
+}
+
+@media(max-width: $lg){
+  a {
+    color: $black;
+    text-decoration: none;
+    font-size: 14rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.2s ease-in-out;
+  }
+}
+
+@media(min-width: $lg){
+  a {
+    color: $black;
+    text-decoration: none;
+    font-size: 18rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.2s ease-in-out;
+  }
 }

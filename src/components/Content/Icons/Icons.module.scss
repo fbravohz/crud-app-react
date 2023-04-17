@@ -14,6 +14,7 @@ $buttonWidth: 95px;
   color: white;
   border: none;
   display: flex;
+  align-items: center;
   width: $buttonWidth;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -31,6 +32,7 @@ $buttonWidth: 95px;
   color: white;
   border: none;
   display: flex;
+  align-items: center;
   width: $buttonWidth;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -48,6 +50,7 @@ $buttonWidth: 95px;
   color: white;
   border: none;
   display: flex;
+  align-items: center;
   width: $buttonWidth;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -63,6 +66,7 @@ $buttonWidth: 95px;
   $localColor: #427200;
   background-color: $localColor;
   display: flex;
+  align-items: center;
   margin: 2px;
   padding: 3px;
   border-radius: 5px;
@@ -74,9 +78,25 @@ $buttonWidth: 95px;
   $localColor: #006772;
   background-color: $localColor;
   display: flex;
+  align-items: center;
   margin: 2px;
   padding: 3px;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
 
+@media (max-width: $lg){
+  .fontIcon{
+    font-size: 10rem;
+    margin-left: 2px;
+    color: white;
+  }
+}
+
+@media (min-width: $lg){
+  .fontIcon{
+    font-size: 15rem;
+    margin-left: 2px;
+    color: white;
+  }
 }

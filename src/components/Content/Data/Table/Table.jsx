@@ -68,6 +68,7 @@ export default function TableItems(){
   const columns = Object.keys(database[0]);
 
   return(
+  <div className={styles.tableContainer}>
   <table className={styles.table}>
     <thead>
       <tr>
@@ -82,6 +83,7 @@ export default function TableItems(){
       ))}
     </tbody>
   </table>
+  </div>
   );
 }
 
