@@ -62,6 +62,237 @@
         "Editar",
         "Borrar"
       ]
+    },
+    {
+      "id": 4,
+      "Fecha": "2018-01-02",
+      "Centro": "Puebla",
+      "Nombre": "Gabriela Lopez",
+      "Curso": "marketing digital",
+      "Edad": 24,
+      "Contacto": {
+      "Telefono": "7891234",
+      "Correo": "glopez@correo.com"
+      },
+      "Etiquetas": [
+      "etiqueta3",
+      "etiqueta4"
+      ],
+      "Acciones": [
+      "Ver",
+      "Editar",
+      "Borrar"
+      ]
+    },
+    {
+      "id": 5,
+      "Fecha": "2018-01-02",
+      "Centro": "Guadalajara",
+      "Nombre": "Carlos Ramirez",
+      "Curso": "ingeniería civil",
+      "Edad": 28,
+      "Contacto": {
+      "Telefono": "4567890",
+      "Correo": "cramirez@correo.com"
+      },
+      "Etiquetas": [
+      "etiqueta2",
+      "etiqueta5"
+      ],
+      "Acciones": [
+      "Ver",
+      "Editar",
+      "Borrar"
+      ]
+    },
+    {
+      "id": 6,
+      "Fecha": "2018-01-03",
+      "Centro": "Tijuana",
+      "Nombre": "Laura Diaz",
+      "Curso": "diseño gráfico",
+      "Edad": 23,
+      "Contacto": {
+      "Telefono": "6543210",
+      "Correo": "ldiaz@correo.com"
+      },
+      "Etiquetas": [
+      "etiqueta3",
+      "etiqueta5"
+      ],
+      "Acciones": [
+      "Ver",
+      "Editar",
+      "Borrar"
+      ]
+    },
+    {
+      "id": 7,
+      "Fecha": "2018-01-03",
+      "Centro": "Monterrey",
+      "Nombre": "Jose Hernandez",
+      "Curso": "programación web",
+      "Edad": 32,
+      "Contacto": {
+      "Telefono": "3456789",
+      "Correo": "jhernandez@correo.com"
+      },
+      "Etiquetas": [
+      "etiqueta",
+      "etiqueta4"
+      ],
+      "Acciones": [
+      "Ver",
+      "Editar",
+      "Borrar"
+      ]
+    },
+    {
+      "id": 8,
+      "Fecha": "2018-01-03",
+      "Centro": "Guadalajara",
+      "Nombre": "Ana Maria Perez",
+      "Curso": "negocios internacionales",
+      "Edad": 27,
+      "Contacto": {
+      "Telefono": "8901234",
+      "Correo": "amperez@correo.com"
+      },
+      "Etiquetas": [
+      "etiqueta2",
+      "etiqueta5"
+      ],
+      "Acciones": [
+      "Ver",
+      "Editar",
+      "Borrar"
+      ]
+    },
+    {
+      "id": 10,
+      "Fecha": "2019-05-15",
+      "Centro": "Tijuana",
+      "Nombre": "Luisa Fernanda",
+      "Curso": "Marketing Digital",
+      "Edad": 28,
+      "Contacto": {
+      "Telefono": "7894561",
+      "Correo": "luisaf@correo.com"
+      },
+      "Etiquetas": [
+      "etiqueta3",
+      "etiqueta4"
+      ],
+      "Acciones": [
+      "Ver",
+      "Editar",
+      "Borrar"
+      ]
+    },
+    {
+      "id": 11,
+      "Fecha": "2019-06-20",
+      "Centro": "Mérida",
+      "Nombre": "Carlos Alberto",
+      "Curso": "Finanzas para no financieros",
+      "Edad": 35,
+      "Contacto": {
+      "Telefono": "7456213",
+      "Correo": "carlosa@correo.com"
+      },
+      "Etiquetas": [
+      "etiqueta3",
+      "etiqueta5"
+      ],
+      "Acciones": [
+      "Ver",
+      "Editar",
+      "Borrar"
+      ]
+    },
+    {
+      "id": 12,
+      "Fecha": "2019-08-05",
+      "Centro": "Ciudad Juárez",
+      "Nombre": "Mariana Gómez",
+      "Curso": "Desarrollo de software",
+      "Edad": 26,
+      "Contacto": {
+      "Telefono": "9632145",
+      "Correo": "marianag@correo.com"
+      },
+      "Etiquetas": [
+      "etiqueta5",
+      "etiqueta6"
+      ],
+      "Acciones": [
+      "Ver",
+      "Editar",
+      "Borrar"
+      ]
+    },
+    {
+      "id": 13,
+      "Fecha": "2020-01-15",
+      "Centro": "Puebla",
+      "Nombre": "Alejandro Pérez",
+      "Curso": "Diseño gráfico",
+      "Edad": 24,
+      "Contacto": {
+      "Telefono": "4562138",
+      "Correo": "alejandrop@correo.com"
+      },
+      "Etiquetas": [
+      "etiqueta4",
+      "etiqueta7"
+      ],
+      "Acciones": [
+      "Ver",
+      "Editar",
+      "Borrar"
+      ]
+    },
+    {
+      "id": 14,
+      "Fecha": "2020-03-20",
+      "Centro": "Cancún",
+      "Nombre": "Lucía Torres",
+      "Curso": "Turismo",
+      "Edad": 31,
+      "Contacto": {
+      "Telefono": "7852143",
+      "Correo": "luciatorres@correo.com"
+      },
+      "Etiquetas": [
+      "etiqueta3",
+      "etiqueta5"
+      ],
+      "Acciones": [
+      "Ver",
+      "Editar",
+      "Borrar"
+      ]
+    },
+    {
+      "id": 15,
+      "Fecha": "2020-06-05",
+      "Centro": "Mazatlán",
+      "Nombre": "Ricardo Flores",
+      "Curso": "Inglés",
+      "Edad": 42,
+      "Contacto": {
+      "Telefono": "3214567",
+      "Correo": "ricardof@correo.com"
+      },
+      "Etiquetas": [
+      "etiqueta2",
+      "etiqueta6"
+      ],
+      "Acciones": [
+      "Ver",
+      "Editar",
+      "Borrar"
+      ]
     }
   ],
   "template":{
